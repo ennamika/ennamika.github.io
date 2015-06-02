@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: iOS | My Blog]]></title>
+  <link href="http://ennamika.github.io/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://ennamika.github.io/"/>
+  <updated>2014-04-08T23:43:07+09:00</updated>
+  <id>http://ennamika.github.io/</id>
+  <author>
+    <name><![CDATA[Mika Yamamoto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[iOSアプリ開発逆引きレシピが出版されます]]></title>
+    <link href="http://ennamika.github.io/blog/2014/04/08/ios-recipe/"/>
+    <updated>2014-04-08T12:33:05+09:00</updated>
+    <id>http://ennamika.github.io/blog/2014/04/08/ios-recipe</id>
+    <content type="html"><![CDATA[<p>現在予約受付中です。<br/>
+<a href="http://www.amazon.co.jp/gp/product/4798134619/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=247&creative=1211&creativeASIN=4798134619&linkCode=as2&tag=ennabox-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4798134619&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=ennabox-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=ennabox-22&l=am2&o=9&a=4798134619" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<h2>ほんのちょっとだけお手伝いさせてもらいました</h2>
+
+<p>ほんの少しだけですが、執筆のお手伝いをさせていただきました。<br/>
+お手伝いさせていただいた箇所以外も確認しましたが、本当にiOS開発者必携の書籍になっていると思います。<br/>
+私も手元においておこうと思いますーωー*<br/>
+宣伝力は持ってませんが、少しでも興味を持っていただける方が増えればと思います。</p>
+
+<h2>ご紹介</h2>
+
+<blockquote><h3>iPhoneアプリ開発の現場で「使える」TIPS集！</h3>
+
+<p>本書はiPhoneアプリ開発で困ったとき、そのつまずきやトラブルを「自力」で解決できるTIPS集です。<br/>
+新しくなったフラットデザインのユーザーインターフェースやマルチメディア、課金など開発にかかわる重要なポイントをカテゴリ別にまとめていますので、目的の項目を即座に見つけ開発の参考にすることができます。<br/>
+すべてのTIPSはサンプルを用意していますので気になったコードは実際に確認できます。<br/>
+iOS7、Xcode5以降をベースに、旧バージョンでも使える内容はアイコンで表示しています。<br/>
+iPhoneアプリ開発に携わるすべての開発者にとって、まさに必携の1冊です。</p></blockquote>
+
+<p>⇒ <a href="http://books.shoeisha.co.jp/book/b176395.html">http://books.shoeisha.co.jp/book/b176395.html</a></p>
+
+<p>やりたいこと以外にも、よく詰まってしまうような箇所の解決方法なども載っています・ω・*</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[更新中]AirLocate]]></title>
+    <link href="http://ennamika.github.io/blog/2014/04/03/airlocate/"/>
+    <updated>2014-04-03T09:29:31+09:00</updated>
+    <id>http://ennamika.github.io/blog/2014/04/03/airlocate</id>
+    <content type="html"><![CDATA[<p>iOS Dev Library にあるサンプルを読んでいきますー・ω・<br/>
+iBeaconに関するサンプル</p>
+
+<p><a href="https://developer.apple.com/library/ios/samplecode/AirLocate/Introduction/Intro.html">AirLocate: Using CoreLocation to monitor, range, and configure your device as an iBeacon</a></p>
+
+<!-- more -->
+
+
+<h2>ファイル</h2>
+
+<ul>
+<li><p>APLUUIDViewController.h / APLUUIDViewController.m</p></li>
+<li><p>APLMonitoringViewController.h / APLMonitoringViewController.m</p></li>
+<li><p>APLRangingViewController.h / APLRangingViewController.m<br/>
+観測領域内のビーコンを検出する
+<a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLBeaconRegion_class/Reference/Reference.html">CLBeaconRegion</a>を生成</p></li>
+<li><p>APLCalibrationBeginViewController.h / APLCalibrationBeginViewController.m</p></li>
+<li><p>APLCalibrationValculator.h / APLCalibrationValculator.m</p></li>
+<li><p>APLCalibrationEndViewCntroller.h / APLCalibrationEndViewCntroller.m</p></li>
+<li><p>APLConfigurationViewController.h / APLConfigurationViewController.m</p></li>
+<li><p>APLDefaults.h / APLDefaults.m<br/>
+共通データを記載しているシングルトン</p></li>
+<li><p>APLProgressTableViewCell.h / APLProgressTableViewCell.m<br/>
+テーブルビュー用セル</p></li>
+<li><p>APLAppDelegate.h / APLAppDelegate.m<br/>
+アプリケーションデリゲート。<br/>
+<a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html">CLLocationManager</a>クラスを生成。<br/>
+<a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManagerDelegate_Protocol/CLLocationManagerDelegate/CLLocationManagerDelegate.html">CLLocationManagerDelegate</a>デリゲートを持つ。</p></li>
+</ul>
+
+
+<h2>クラス</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html">CLLocationManager</a><br/>
+位置情報クラス。GPS・電子コンパス等。
+
+<ul>
+<li>startMonitoringForRegion:<br/>
+領域観測イベントが発生した時のイベントのハンドリングを開始</li>
+<li>startRangingBeaconsInRegion:<br/>
+Beacon領域への出入りのイベントのハンドリングを開始</li>
+</ul>
+</li>
+<li><a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLBeaconRegion_class/Reference/Reference.html">CLBeaconRegion</a></li>
+</ul>
+
+
+<h2>デリゲート</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManagerDelegate_Protocol/CLLocationManagerDelegate/CLLocationManagerDelegate.html">CLLocationManagerDelegate</a><br/>
+位置情報に関するデリゲートクラス。
+
+<ul>
+<li>- (void)locationManager:(CLLocationManager <em>)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion </em>)region<br/>
+iBeacon監視状態を知らせてくれるメソッド。<code>CLLocationManager requestStateForRegion:</code>で追加すると呼ばれる</li>
+<li>- (void)locationManager:(CLLocationManager <em>)manager didRangeBeacons:(NSArray </em>)beacons inRegion:(CLBeaconRegion *)region</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

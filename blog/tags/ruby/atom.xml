@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: Ruby | My Blog]]></title>
+  <link href="http://ennamika.github.io/blog/tags/ruby/atom.xml" rel="self"/>
+  <link href="http://ennamika.github.io/"/>
+  <updated>2014-04-08T23:43:07+09:00</updated>
+  <id>http://ennamika.github.io/</id>
+  <author>
+    <name><![CDATA[Mika Yamamoto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[TagCloud工事中]OctopressでRakefileカスタマイズ]]></title>
+    <link href="http://ennamika.github.io/blog/2014/04/07/octopressrakefile/"/>
+    <updated>2014-04-07T11:12:03+09:00</updated>
+    <id>http://ennamika.github.io/blog/2014/04/07/octopressrakefile</id>
+    <content type="html"><![CDATA[<h2>目的</h2>
+
+<ul>
+<li>Rubyなんて触ったことないのでとりあえず文法とか調べてみる</li>
+<li>ディレクトリ構成をカスタマイズしてみる</li>
+<li>タグクラウド（カテゴリとタグは分ける）の導入</li>
+<li>このページのフッター部分にタグクラウドを表示させる</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h2>参考</h2>
+
+<ul>
+<li><a href="http://blog.awairo.net/blog/2014/01/01/customizing-octopress-rakefile/">OctopressのRakefileのカスタマイズ</a></li>
+<li><a href="http://blog.digital-bot.com/blog/2013/09/03/octopress-tips/">Octopressのカスタマイズ</a></li>
+<li><a href="http://rcmdnk.github.io/blog/2013/04/12/blog-octopress/">Octopressでのタグの運用</a></li>
+<li><a href="http://www.gorticus.com/blog/2012/09/09/zebra-tables-in-octopress-markdown/">Zebra Tables in Octopress Markdown</a></li>
+</ul>
+
+
+<h2>ディレクトリ構成の変更</h2>
+
+<h2>タグクラウドの導入</h2>
+
+<p>タグクラウドは有名な<a href="http://tokkonopapa.github.io/blog/2012/01/04/octopress-plugin-for-categories-cloud/">Octopress用Tag Cloudプラグインをリリースします</a>の方のプラグインを利用させてもらうことにします。</p>
+
+<div class="github-widget" data-repo="tokkonopapa/octopress-tagcloud"></div>
+
+]]></content>
+  </entry>
+  
+</feed>
