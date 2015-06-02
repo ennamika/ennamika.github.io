@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Blog]]></title>
+  <link href="http://ennamika.github.io/atom.xml" rel="self"/>
+  <link href="http://ennamika.github.io/"/>
+  <updated>2015-06-02T23:31:53+09:00</updated>
+  <id>http://ennamika.github.io/</id>
+  <author>
+    <name><![CDATA[Mika Yamamoto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[絶賛更新中]iOS,OSX向けの新しい言語「swift」について]]></title>
+    <link href="http://ennamika.github.io/blog/2014/06/03/swift/"/>
+    <updated>2014-06-03T10:34:05+09:00</updated>
+    <id>http://ennamika.github.io/blog/2014/06/03/swift</id>
+    <content type="html"><![CDATA[<p>Appleから新しいiOS,OS X向け言語が発表されたみたいです・ω・</p>
+
+<p><a href="https://developer.apple.com/swift/">Swift</a></p>
+
+<p>なんて速そうなお名前。
+さっそくiBook StoreにSwiftに関する電子書籍がアップされていたので読んでみました。</p>
+
+<div class="pochireba" style="text-align:left;font-size:small;padding:20px 0;/zoom: 1;overflow: hidden;"><a href="https://itunes.apple.com/jp/book/swift-programming-language/id881256329?mt=11&uo=4&at=10l8vp" target="_blank" ><img src="http://a1.mzstatic.com/us/r30/Publication4/v4/a9/9d/d1/a99dd1d5-39b9-71ce-7500-2eb3e8d56990/cover.60x60-50.jpg" alt="The Swift Programming Language" width="60" height="60" style="float:left;margin:0 15px 0 0;width:60px;height:60px;" class="pochi_img" ></a><div class="pochi_info" style="text-align:left;/zoom: 1;overflow: hidden;"><div class="pochi_name"><a href="https://itunes.apple.com/jp/book/swift-programming-language/id881256329?mt=11&uo=4&at=10l8vp" target="_blank" >The Swift Programming Language</a></div><div class="pochi_price" style="display:inline;">無料</div><div class="pochi_time" style="font-size:x-small;display:inline;">(2014.06.03時点)</div>&nbsp;<a href="https://itunes.apple.com/jp/book/swift-programming-language/id881256329?mt=11&uo=4&at=10l8vp" style="width:60px;color:#ffffff;background:#000000;font-size:8px;font-weight:bold;text-align:center;display:inline;text-decoration:none;border:0px;padding:2px;border-radius:5px;white-space:nowrap;" target="_blank" >App Store</a><div class="pochi_seller"><a href="https://itunes.apple.com/jp/artist/apple-inc./id405307759?mt=11&uo=4&at=10l8vp" target="_blank" >Apple Inc.</a></div><div class="pochi_post" style="font-size:x-small;">posted with <a href="http://pochireba.com" rel="nofollow" target="_blank">ポチレバ</a></div></div><div class="pochireba-footer" style="clear: left"></div></div>
+
+
+<p>※合間にまとめてるためまったり更新です＞＜</p>
+
+<!-- more -->
+
+
+<h2>変数と定数</h2>
+
+<p>定数は<code>let</code>で宣言、変数は<code>var</code>で宣言します。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>let maxNum = 50
+</span><span class='line'>var number = 0</span></code></pre></td></tr></table></div></figure>
+
+
+<p>上記で、<code>maxNum</code>という<code>50</code>が入った定数が宣言。<br/>
+<code>number</code>という変数を<code>0</code>で初期化という形になります。</p>
+
+<p>なるほど。<br/>
+<code>let</code>で宣言した場合は定数という扱いなので、内容が変更される予定がなければ基本的には<code>let</code>で宣言するのが望ましいです。</p>
+
+<h3>型推論</h3>
+
+<p>Swiftには型推論という機能があるようで、代入する値によって型を推論してくれるようです。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>let number = 4
+</span><span class='line'>let name = 'Mika'
+</span><span class='line'>var data = 5.4</span></code></pre></td></tr></table></div></figure>
+
+
+<p>これで、<br/>
+<code>number</code>は<code>Integer</code>型の定数<br/>
+<code>name</code>は<code>String</code>型の定数<br/>
+<code>data</code>は<code>Double</code>型の変数<br/>
+という感じの宣言になります。</p>
+
+<p>コンマで区切れば複数宣言も可能です。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var x = 0.0, y = 0.0, z = 0.0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>型指定</h3>
+
+<p>もちろん型を指定して宣言することもできます。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var message: String</span></code></pre></td></tr></table></div></figure>
+
+
+<p>この<code>:</code>は<code>…の型は…</code>といった感じの意味になっていて、<code>:</code>の後ろに指定したい型を書きます。<br/>
+宣言時に型を指定した時はその他の型を入れることはできません。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>message = 'MESSAGE'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>基本的には型指定を使わなくても、宣言時に型推論を頼って初期値を入れてしまえば、問題ありません。</p>
+
+<h3>定数・変数の名前に利用できるもの</h3>
+
+<p>Unicode文字に含まれている文字であればどんなものでも宣言として使えます。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>let π = 3.14159
+</span><span class='line'>let あいさつ = "こんにちは！"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>iPhoneで利用されている絵文字なんてのも定数・変数として利用でちゃいます（このブログではちょっと表示できませんが）。</p>
+
+<h2>定数・変数の出力</h2>
+
+<p>出力については<code>println</code>関数を使うことで簡単に出力できます。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOSアプリ開発逆引きレシピが出版されます]]></title>
+    <link href="http://ennamika.github.io/blog/2014/04/08/ios-recipe/"/>
+    <updated>2014-04-08T12:33:05+09:00</updated>
+    <id>http://ennamika.github.io/blog/2014/04/08/ios-recipe</id>
+    <content type="html"><![CDATA[<p>絶賛発売中です。<br/>
+<a href="http://www.amazon.co.jp/gp/product/4798134619/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=247&creative=1211&creativeASIN=4798134619&linkCode=as2&tag=ennabox-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4798134619&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=ennabox-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=ennabox-22&l=am2&o=9&a=4798134619" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<!-- more -->
+
+
+<h2>ほんのちょっとだけお手伝いさせてもらいました</h2>
+
+<p>ほんの少しだけですが、執筆のお手伝いをさせていただきました。<br/>
+お手伝いさせていただいた箇所以外も確認しましたが、本当にiOS開発者必携の書籍になっていると思います。<br/>
+私も手元においておこうと思いますーωー*<br/>
+宣伝力は持ってませんが、少しでも興味を持っていただける方が増えればと思います。</p>
+
+<h2>ご紹介</h2>
+
+<blockquote><h3>iPhoneアプリ開発の現場で「使える」TIPS集！</h3>
+
+<p>本書は、現場で活躍するiOSアプリ開発者または脱初心者を目指す開発者の方に向けて、iOSアプリ開発で躓きがちな内容や知っているとスムーズに開発を進めることができる内容を中心にまとめた「厳選TIPS集」です。<br/>
+すでに開発経験がある方、または脱初心者を目指す開発者の方を対象としていますので、よく入門書にある開発環境の設定などについては割愛しています。その分、現場で活躍する開発者の方が満足できるようなTIPSを章ごとに分けて解説しています。<br/>
+現在のiOSアプリ開発は、大規模化というよりもよりいっそうミニマムな環境になりつつあり、チーム単位で行うケースや、個人で行うケースが多くなってきています。そうした時、「自力」で解決できるTIPSが手元にあれば、非常に心強い味方になるはずです。<br/>
+本書の執筆にあたっては、iOSアプリ開発を実際に行っている現役開発者の方が「自分であればこういった内容のTIPSがほしい」という、「現場の声」を元にしたTIPSを中心に構成を立てて、それぞれの得意分野を執筆しています。<br/>
+構成を見てもわかるようにユーザーインターフェース、ストーリーボードから始まり、描画処理、画像処理、マルチメディア処理などの画像や動画系の処理、インターネットの利用、Webサービスの利用といった外部サービスを利用した開発も解説しています。また、地図やデバイス、バックグラウンド動作、通知、データ処理、データベースなどといった開発現場でニーズの高いものも数多く入れています。さらに質の高いアプリ開発に必要なデバッグや、世界に向けてアプリを公開したい時に必要な国際化対応、アプリ収益化についても解説しています。<br/>
+本書がすべてのiOSアプリ開発者の手助けになれば幸いです。</p></blockquote>
+
+<p>⇒ <a href="http://books.shoeisha.co.jp/book/b176395.html">http://books.shoeisha.co.jp/book/b176395.html</a></p>
+
+<h2>目次</h2>
+
+<ul>
+<li>第 1 章 ユーザーインターフェース</li>
+<li>第 2 章 ストーリーボード</li>
+<li>第 3 章 タッチアクション</li>
+<li>第 4 章 描画処理</li>
+<li>第 5 章 画像処理</li>
+<li>第 6 章 マルチメディア処理</li>
+<li>第 7 章 インターネット利用</li>
+<li>第 8 章 Webサービス利用</li>
+<li>第 9 章 地図</li>
+<li>第 10 章 デバイス</li>
+<li>第 11 章 バックグラウンド動作</li>
+<li>第 12 章 通知</li>
+<li>第 13 章 連携処理</li>
+<li>第 14 章 データ処理</li>
+<li>第 15 章 データベース</li>
+<li>第 16 章 国際化対応</li>
+<li>第 17 章 デバッグ</li>
+<li>第 18 章 アプリ収益化</li>
+</ul>
+
+
+<p>やりたいこと以外にも、よく詰まってしまうような箇所の解決方法なども載っています・ω・*</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OctopressでRakefileカスタマイズ]]></title>
+    <link href="http://ennamika.github.io/blog/2014/04/07/octopressrakefile/"/>
+    <updated>2014-04-07T11:12:03+09:00</updated>
+    <id>http://ennamika.github.io/blog/2014/04/07/octopressrakefile</id>
+    <content type="html"><![CDATA[<h2>目的</h2>
+
+<ul>
+<li>Rubyなんて触ったことないのでとりあえず文法とか調べてみる</li>
+<li>ディレクトリ構成をカスタマイズしてみる</li>
+<li>タグクラウド（カテゴリとタグは分ける）の導入</li>
+<li>このページのフッター部分にタグクラウドを表示させる</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h2>参考</h2>
+
+<ul>
+<li><a href="http://blog.awairo.net/blog/2014/01/01/customizing-octopress-rakefile/">OctopressのRakefileのカスタマイズ</a></li>
+<li><a href="http://blog.digital-bot.com/blog/2013/09/03/octopress-tips/">Octopressのカスタマイズ</a></li>
+<li><a href="http://rcmdnk.github.io/blog/2013/04/12/blog-octopress/">Octopressでのタグの運用</a></li>
+<li><a href="http://www.gorticus.com/blog/2012/09/09/zebra-tables-in-octopress-markdown/">Zebra Tables in Octopress Markdown</a></li>
+</ul>
+
+
+<h2>目的</h2>
+
+<ul>
+<li>Rubyなんて触ったことないのでとりあえず文法とか調べてみる</li>
+<li>ディレクトリ構成をカスタマイズしてみる</li>
+<li>タグクラウド（カテゴリとタグは分ける）の導入</li>
+<li>このページのフッター部分にタグクラウドを表示させる</li>
+</ul>
+
+
+<h2>ディレクトリ構成の変更</h2>
+
+<h2>タグクラウドの導入</h2>
+
+<p>タグクラウドは有名な<a href="http://tokkonopapa.github.io/blog/2012/01/04/octopress-plugin-for-categories-cloud/">Octopress用Tag Cloudプラグインをリリースします</a>の方のプラグインを利用させてもらうことにします。</p>
+
+<div class="github-widget" data-repo="tokkonopapa/octopress-tagcloud"></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[AirLocate]]></title>
+    <link href="http://ennamika.github.io/blog/2014/04/03/airlocate/"/>
+    <updated>2014-04-03T09:29:31+09:00</updated>
+    <id>http://ennamika.github.io/blog/2014/04/03/airlocate</id>
+    <content type="html"><![CDATA[<p>iOS Dev Library にあるサンプルを読んでいきますー・ω・<br/>
+iBeaconに関するサンプル</p>
+
+<p><a href="https://developer.apple.com/library/ios/samplecode/AirLocate/Introduction/Intro.html">AirLocate: Using CoreLocation to monitor, range, and configure your device as an iBeacon</a></p>
+
+<!-- more -->
+
+
+<h2>ファイル</h2>
+
+<ul>
+<li><p>APLUUIDViewController.h / APLUUIDViewController.m</p></li>
+<li><p>APLMonitoringViewController.h / APLMonitoringViewController.m</p></li>
+<li><p>APLRangingViewController.h / APLRangingViewController.m<br/>
+観測領域内のビーコンを検出する
+<a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLBeaconRegion_class/Reference/Reference.html">CLBeaconRegion</a>を生成</p></li>
+<li><p>APLCalibrationBeginViewController.h / APLCalibrationBeginViewController.m</p></li>
+<li><p>APLCalibrationValculator.h / APLCalibrationValculator.m</p></li>
+<li><p>APLCalibrationEndViewCntroller.h / APLCalibrationEndViewCntroller.m</p></li>
+<li><p>APLConfigurationViewController.h / APLConfigurationViewController.m</p></li>
+<li><p>APLDefaults.h / APLDefaults.m<br/>
+共通データを記載しているシングルトン</p></li>
+<li><p>APLProgressTableViewCell.h / APLProgressTableViewCell.m<br/>
+テーブルビュー用セル</p></li>
+<li><p>APLAppDelegate.h / APLAppDelegate.m<br/>
+アプリケーションデリゲート。<br/>
+<a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html">CLLocationManager</a>クラスを生成。<br/>
+<a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManagerDelegate_Protocol/CLLocationManagerDelegate/CLLocationManagerDelegate.html">CLLocationManagerDelegate</a>デリゲートを持つ。</p></li>
+</ul>
+
+
+<h2>クラス</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html">CLLocationManager</a><br/>
+位置情報クラス。GPS・電子コンパス等。
+
+<ul>
+<li>startMonitoringForRegion:<br/>
+領域観測イベントが発生した時のイベントのハンドリングを開始</li>
+<li>startRangingBeaconsInRegion:<br/>
+Beacon領域への出入りのイベントのハンドリングを開始</li>
+</ul>
+</li>
+<li><a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLBeaconRegion_class/Reference/Reference.html">CLBeaconRegion</a></li>
+</ul>
+
+
+<h2>デリゲート</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManagerDelegate_Protocol/CLLocationManagerDelegate/CLLocationManagerDelegate.html">CLLocationManagerDelegate</a><br/>
+位置情報に関するデリゲートクラス。
+
+<ul>
+<li>- (void)locationManager:(CLLocationManager <em>)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion </em>)region<br/>
+iBeacon監視状態を知らせてくれるメソッド。<code>CLLocationManager requestStateForRegion:</code>で追加すると呼ばれる</li>
+<li>- (void)locationManager:(CLLocationManager <em>)manager didRangeBeacons:(NSArray </em>)beacons inRegion:(CLBeaconRegion *)region</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ブログ移動作業中]]></title>
+    <link href="http://ennamika.github.io/blog/2014/03/20/initial-blog/"/>
+    <updated>2014-03-20T11:48:43+09:00</updated>
+    <id>http://ennamika.github.io/blog/2014/03/20/initial-blog</id>
+    <content type="html"><![CDATA[<p>作業でメモしておきたいことをつらつらと</p>
+
+<!-- more -->
+
+
+<h1>Octopress</h1>
+
+<div class="github-widget" data-repo="imathis/octopress"></div>
+
+
+<p>⇒<a href="http://octopress.org/">http://octopress.org/</a></p>
+
+<h2>Theme</h2>
+
+<div class="github-widget" data-repo="macjasp/cleanpress"></div>
+
+
+<h2>Font</h2>
+
+<ul>
+<li><a href="http://www.flopdesign.com/freefont/flopdesignfont.html">FLOP DESIGN</a></li>
+</ul>
+
+
+<h2>jQuery Plugin</h2>
+
+<div class="github-widget" data-repo="JoelSutherland/GitHub-jQuery-Repo-Widget"></div>
+
+]]></content>
+  </entry>
+  
+</feed>

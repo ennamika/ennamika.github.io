@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: Objective-C | My Blog]]></title>
+  <link href="http://ennamika.github.io/blog/tags/objective-c/atom.xml" rel="self"/>
+  <link href="http://ennamika.github.io/"/>
+  <updated>2015-06-02T23:31:53+09:00</updated>
+  <id>http://ennamika.github.io/</id>
+  <author>
+    <name><![CDATA[Mika Yamamoto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[iOSアプリ開発逆引きレシピが出版されます]]></title>
+    <link href="http://ennamika.github.io/blog/2014/04/08/ios-recipe/"/>
+    <updated>2014-04-08T12:33:05+09:00</updated>
+    <id>http://ennamika.github.io/blog/2014/04/08/ios-recipe</id>
+    <content type="html"><![CDATA[<p>絶賛発売中です。<br/>
+<a href="http://www.amazon.co.jp/gp/product/4798134619/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=247&creative=1211&creativeASIN=4798134619&linkCode=as2&tag=ennabox-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4798134619&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=ennabox-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=ennabox-22&l=am2&o=9&a=4798134619" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<!-- more -->
+
+
+<h2>ほんのちょっとだけお手伝いさせてもらいました</h2>
+
+<p>ほんの少しだけですが、執筆のお手伝いをさせていただきました。<br/>
+お手伝いさせていただいた箇所以外も確認しましたが、本当にiOS開発者必携の書籍になっていると思います。<br/>
+私も手元においておこうと思いますーωー*<br/>
+宣伝力は持ってませんが、少しでも興味を持っていただける方が増えればと思います。</p>
+
+<h2>ご紹介</h2>
+
+<blockquote><h3>iPhoneアプリ開発の現場で「使える」TIPS集！</h3>
+
+<p>本書は、現場で活躍するiOSアプリ開発者または脱初心者を目指す開発者の方に向けて、iOSアプリ開発で躓きがちな内容や知っているとスムーズに開発を進めることができる内容を中心にまとめた「厳選TIPS集」です。<br/>
+すでに開発経験がある方、または脱初心者を目指す開発者の方を対象としていますので、よく入門書にある開発環境の設定などについては割愛しています。その分、現場で活躍する開発者の方が満足できるようなTIPSを章ごとに分けて解説しています。<br/>
+現在のiOSアプリ開発は、大規模化というよりもよりいっそうミニマムな環境になりつつあり、チーム単位で行うケースや、個人で行うケースが多くなってきています。そうした時、「自力」で解決できるTIPSが手元にあれば、非常に心強い味方になるはずです。<br/>
+本書の執筆にあたっては、iOSアプリ開発を実際に行っている現役開発者の方が「自分であればこういった内容のTIPSがほしい」という、「現場の声」を元にしたTIPSを中心に構成を立てて、それぞれの得意分野を執筆しています。<br/>
+構成を見てもわかるようにユーザーインターフェース、ストーリーボードから始まり、描画処理、画像処理、マルチメディア処理などの画像や動画系の処理、インターネットの利用、Webサービスの利用といった外部サービスを利用した開発も解説しています。また、地図やデバイス、バックグラウンド動作、通知、データ処理、データベースなどといった開発現場でニーズの高いものも数多く入れています。さらに質の高いアプリ開発に必要なデバッグや、世界に向けてアプリを公開したい時に必要な国際化対応、アプリ収益化についても解説しています。<br/>
+本書がすべてのiOSアプリ開発者の手助けになれば幸いです。</p></blockquote>
+
+<p>⇒ <a href="http://books.shoeisha.co.jp/book/b176395.html">http://books.shoeisha.co.jp/book/b176395.html</a></p>
+
+<h2>目次</h2>
+
+<ul>
+<li>第 1 章 ユーザーインターフェース</li>
+<li>第 2 章 ストーリーボード</li>
+<li>第 3 章 タッチアクション</li>
+<li>第 4 章 描画処理</li>
+<li>第 5 章 画像処理</li>
+<li>第 6 章 マルチメディア処理</li>
+<li>第 7 章 インターネット利用</li>
+<li>第 8 章 Webサービス利用</li>
+<li>第 9 章 地図</li>
+<li>第 10 章 デバイス</li>
+<li>第 11 章 バックグラウンド動作</li>
+<li>第 12 章 通知</li>
+<li>第 13 章 連携処理</li>
+<li>第 14 章 データ処理</li>
+<li>第 15 章 データベース</li>
+<li>第 16 章 国際化対応</li>
+<li>第 17 章 デバッグ</li>
+<li>第 18 章 アプリ収益化</li>
+</ul>
+
+
+<p>やりたいこと以外にも、よく詰まってしまうような箇所の解決方法なども載っています・ω・*</p>
+]]></content>
+  </entry>
+  
+</feed>
